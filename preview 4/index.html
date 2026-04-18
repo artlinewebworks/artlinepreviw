@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Island Clothing</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+  ISLAND
+  <div class="cart-btn" onclick="toggleCart()">🛒 (<span id="count">0</span>)</div>
+</header>
+
+<section class="hero">
+  <h1>Island</h1>
+  <p>Own Your Style</p>
+  <button onclick="scrollToShop()">Shop Now</button>
+</section>
+
+<section id="shop">
+<h2>Shop Collection</h2>
+
+<select onchange="sortProducts(this.value)">
+  <option value="">Sort</option>
+  <option value="low">Price Low → High</option>
+  <option value="high">Price High → Low</option>
+</select>
+
+<div id="products" class="grid"></div>
+</section>
+
+<section class="deals">
+<h2>🔥 Deals</h2>
+<div class="deal-box">50% OFF SUMMER</div>
+<div class="deal-box">BUY 2 GET 1</div>
+</section>
+
+<section class="gallery">
+<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d">
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+</section>
+
+<!-- CART -->
+<div id="cart" class="cart">
+<h2>Cart</h2>
+<div id="cartItems"></div>
+<p>Total: ₹<span id="total">0</span></p>
+
+<input placeholder="Name" id="name">
+<input placeholder="Address" id="address">
+<input placeholder="Phone" id="phone">
+
+<button onclick="checkout()">Place Order</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
